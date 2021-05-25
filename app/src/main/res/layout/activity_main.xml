@@ -1,0 +1,96 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="false"
+        android:theme="@style/Theme.SharedPreferences.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.SharedPreferences.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="?attr/actionBarSize">
+
+        <EditText
+            android:id="@+id/textNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="60dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <EditText
+            android:id="@+id/textIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Idade"
+            android:importantForAutofill="no"
+            android:inputType="numberSigned"
+            app:layout_constraintTop_toBottomOf="@id/textNome"
+            tools:layout_conversion_absoluteHeight="60dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+        <Button
+            android:id="@+id/buttonEscrever"
+            android:layout_width="325dp"
+            android:layout_height="47dp"
+            android:text="Escrever"
+            android:textAlignment="center"
+            android:onClick="ButtonClickEscrever"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIdade"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="110dp" />
+
+        <Button
+            android:id="@+id/buttonLer"
+            android:layout_width="325dp"
+            android:layout_height="47dp"
+            android:text="Ler"
+            android:textAlignment="center"
+            android:onClick="ButtonClickLer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEscrever"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="110dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="319dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
